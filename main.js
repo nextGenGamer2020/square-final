@@ -16,8 +16,8 @@ function setup(){
     poseNet.on('pose', gotPoses)
 }
 function draw(){
-    document.getElementById("square_side").innerHTML = "Width and height of a square will be = "+ difference+"px"
     background("dodgerblue")
+    document.getElementById("square_side").innerHTML = "Width and height of a square will be = "+ difference+"px"
     fill("#fc0377")
     stroke("#fcb503")
     square(noseX,noseY, difference)
@@ -38,7 +38,7 @@ function gotPoses(results){
 
     rightWrist = results[0].pose.rightWrist.x
     leftWrist = results[0].pose.leftWrist.x
-    differnece = floor(leftWrist - rightWrist)
+    difference = floor(leftWrist - rightWrist)
     console.log("rightWrist = "+ rightWrist + "leftWrist"+leftWrist+"difference"+difference)
     }
 
